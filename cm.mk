@@ -23,9 +23,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/asus/T00F/device.mk)
+$(call inherit-product, $(DEVICE_PATH)/device.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/asus/T00F/overlay
+DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
 
 PRODUCT_RUNTIMES := runtime_libart_default
 
